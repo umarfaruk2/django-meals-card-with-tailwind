@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block content %}
+<!-- inside body -->
+<h3 class="text-stone-950 text-3xl font-bold text-center py-5">OUR HOME MADE MEALS</h3>
+
+<div class="grid grid-flow-row lg:grid-cols-4 gap-5 px-4 md:grid-cols-2 sm:grid-cols-1">
+  {% for meal in meals %}
+  <div class="rounded shadow-lg">
+    <img
+      class="full"
+      src="{{meal.strMealThumb}}"
+      alt="Sunset in the mountains"
+    />
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{{meal.strMeal}}</div>
+      <p class="text-gray-700 text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+        quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+        nihil.
+      </p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
